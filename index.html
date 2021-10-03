@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>螂海的个人博客</title>
+        <meta name="keywords"  content="螂海,博客,个人博客,螂海的个人博客,螂海の个人博客,螂海的个人blog,螂海の个人blog,blog,XJLanghai,XJ_Langhai,Langhai,XJ,Xingjin,XJ Studio,Xingjin Studio">
+        <meta name="description"  content="螂海的个人博客">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="others/base.css" >
+        <link rel="stylesheet" href="others/出现动画.css">
+        <script src="others/base.js"></script>
+        <script src="others/love.js"></script>
+        <script src="others/出现动画.js"></script>
+        <script src="others/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" href="live2d/waifu.css">
+        <style>
+            .按钮变色bg {
+                -webkit-transition: 0.5s;
+            }
+            .按钮变色bg:hover {
+                background-color: black;
+            }
+            .按钮变色 {
+                -webkit-transition: 0.5s;
+            }
+            .按钮变色:hover {
+                color: white;
+            }
+
+            @keyframes typing {
+                from { width: 0}
+            }
+            @keyframes blink-caret {
+                50% { border-color: transparent; }
+            }
+            #打字1 {
+                border-right: .08em solid;
+                white-space: nowrap;
+                overflow: hidden;
+                animation: typing 3s steps(23, end),blink-caret .5s step-end infinite alternate;
+                color:white;
+                font-family: 宋;
+                font-size: 25px;
+                width: 575px;
+                position: absolute;
+                top: 13vw;
+            }
+            #打字2 {
+                border-right: .08em solid;
+                white-space: nowrap;
+                overflow: hidden;
+                animation: typing 3s steps(18, end),blink-caret .5s step-end infinite alternate;
+                color:white;
+                font-family: 宋;
+                font-size: 25px;
+                width: 450px;
+                position: absolute;
+                top: 13vw;
+            }
+        </style>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?448994da536d700054c5dfcfac0b7213";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body>
+        <!--背景音乐-->
+        <iframe frameborder="no" marginwidth="0" marginheight="0" width=330 height=86 style="bottom: 5vh;position: fixed;z-index: 1000;" src="//music.163.com/outchain/player?type=2&id=21795080&auto=1&height=66"></iframe>
+
+
+        <!--live2d-->
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" width="280px" height="250px" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-cross"></span>
+            </div>
+        </div>    
+        <script src="live2d/waifu-tips.js"></script>
+        <script src="live2d/live2d.js"></script>
+        <script type="text/javascript">initModel("live2d/")</script>
+
+
+        <!--gitter-->
+        <script>
+            ((window.gitter = {}).chat = {}).options = {
+              room: '螂海的个人博客/community'
+            };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+        <!--个人信息-->
+        <div class="左出" style="width: 18%;position: absolute;top: 34.5vw;left: 2.8%;background-color: white;">
+            <div style="position: absolute;background-color: rgb(50, 50, 50);height: 9vw;width: 100%;z-index: -1;"></div>
+            <div style="text-align: center;margin-top: 3vw;margin-bottom: 3vw;padding: 2vw;">
+                <img src="imgs/头像.png" style="width: 8vw;">
+                <h1 style="color: rgb(0, 123, 255);">螂海</h1>
+                <p style="color: gray;">静坐常思己过，闲谈莫论人非。</p>
+                <p style="color: gray;font-family: Monda;">🎂2005-12-31</p>
+                <hr style="width: 50%;">
+                <table cellspacing="10px" style="margin: 0px auto;text-align: left;">
+                    <tr>
+                        <td>
+                            <a href="https://github.com/XJLanghai" target="_blank" title="User:XJLanghai" style="color: gray;font-family: Monda;font-size: 16px;">
+                                <img src="https://github.com/favicon.ico" style="width: 16px;"><span class="字体变色">GitHub</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://space.bilibili.com/442729189" target="_blank" title="UID:442729189" style="color: gray;font-family: Monda;font-size: 16px;">
+                                <img src="https://www.bilibili.com/favicon.ico" style="width: 16px;"><span class="字体变色">bilibili</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://wpa.qq.com/msgrd?v=3&uin=654126913&site=qq&menu=yes" target="_blank" title="QQ:654126913" style="color: gray;font-family: Monda;font-size: 16px;">
+                                <img src="https://im.qq.com/favicon.ico" style="width: 16px;"><span class="字体变色">QQ</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="mailto:xj_langhai@qq.com" target="_blank" title="Email:XJ_Langhai@qq.com" style="color: gray;font-family: Monda;font-size: 16px;">
+                                <img src="http://rescdn.mail.qq.com/zh_CN/htmledition/images/logo/app/qqmail_logo_android_32h.png" style="width: 16px;"><span class="字体变色">Email</span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <!--导航-->
+        <nav id="导航">
+            <ul style="font-family: Monda;">
+                <li onclick="a(0)">HOME</li>
+                <li onclick="a(1)">TAGS</li>
+            </ul>
+        </nav>
+
+        
+        <!--HOME-->
+        <div id="a1">
+            <!--导航图-->
+            <img src="imgs/HOME.png" style="width: 100%;">
+            <div style="width: 575px;margin: 0px auto;">
+                <p id="打字1">上岸的鱼不再是鱼，真正进入太空的人也不再是人。</p>
+            </div>
+
+            <!--正文-->
+            <div style="margin-top: 5vw;margin-bottom: 10vw;">
+                <div style="margin: 0 auto;width: 50%;text-align: left;background-color: rgb(230, 230, 230);padding: 20px;border-radius: 20px;">
+                    <h1 style="text-align: center;">使用域名以及Github Pages和Coding Pages进行国内外双路解析搭建网站</h1>
+                    <hr>
+                    <div style="color: gray;">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一直想找个地方放博客和一些奇奇怪怪的网站，但是租服务器消费太高了（单纯对我这种高中狗而言，如果租的是国内的服务器还要备案，如果被攻击了还得乱七八糟的维护），而且我也不会什么php之类的动态网站，服务器就完全没必要了。</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后来找了一些免费的空间，但那些都是没什么声誉的，访问速度也不是很快，稳定性一般。</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是乎我就盯上了GitHub Pages和Coding Pages来进行境内外双路解析。</p>        
+                    </div>
+                    <div class="按钮变色bg" style="margin: 0 auto;text-align: center;width: 20%;padding: 1%;border:3px solid black;">
+                        <a href="pages/使用域名以及Github Pages和Coding Pages进行国内外双路解析搭建网站/index.html" target="_blank" style="color: gray;">
+                            <div class="按钮变色">阅读全文»</div>
+                        </a>
+                    </div>
+                    <p style="text-align: right;color: gray;">2021/8/27</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--TAGS-->
+        <div id="a2" style="display: none;">
+            <!--导航图-->
+            <img src="imgs/TAGS.png" style="width: 100%;">
+            <div style="width: 450px;margin: 0px auto;">
+                <p id="打字2">弱小和无知不是生存的障碍，傲慢才是。</p>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+
+            <!--正文-->
+            <div>
+
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--尾页-->
+        <div style="background-image: url(imgs/尾页.png);background-position: 0% 20%;color: white;">
+            <br>
+            <table cellspacing="10px" style="margin: 0px auto;margin-top: 5vh;">
+                <tr style="font-weight: bold;">
+                    <td>MADE BY <span style="color: red;">❤</span></td>
+                    <td style="padding-left: 30vw;">站长所搭建的其它网站：</td>
+                </tr>
+                <tr>
+                    <td>感谢全世界的开发者</td>
+                    <td style="padding-left: 30vw;"><a href="https://the-167-world.tk/" target="_blank" style="color: lightgray;">167号世界</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="padding-left: 30vw;"><a href="https://yeluoxing.ml/" target="_blank" style="color: lightgray;">叶络行の同人文集</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="padding-left: 30vw;"><a href="https://cicixiansheng.ml/" target="_blank" style="color: lightgray;">次次先生の同人文集</a></td>
+                </tr>
+            </table>
+            <p style="text-align: center;margin-bottom: 5vh;">Copyright &copy; 2021 <a href="https://langhai.tk/" style="color: rgb(0, 123, 255);text-decoration: none;" target="_blank"><b>螂海</b></a>. All rights reserved.</p>
+            <br>
+            <div style="background-color: rgb(31, 31, 31);height: 100px;display: flex;justify-content: center;align-items: center;">
+                <p>您刚刚获得成就 <span style="color: purple;font-weight: bold;">[结束了？]</span></p>
+            </div>
+        </div>
+        
+    </body>
+</html>

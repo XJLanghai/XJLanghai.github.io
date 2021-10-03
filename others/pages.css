@@ -1,0 +1,25 @@
+#标题 {
+    margin-top: 100px;
+    margin-left: 25%;
+    width: 60%;
+    padding: 2vw;
+    background-color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+#正文 {
+    margin-left: 25%;
+    width: 60%;
+    background-color: rgb(250, 250, 250);
+    padding: 2vw;
+}
+
+
+p a {
+    color: black;
+    border-bottom: 1px dashed black;
+    -webkit-transition: 0.5s;
+}
+p a:hover {
+    color: gray;
+}
