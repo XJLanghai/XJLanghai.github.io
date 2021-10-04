@@ -103,47 +103,54 @@
         <div id="标题">使用域名以及GitHub Pages和Coding Pages进行国内外双路解析搭建网站</div>
         <!--正文-->
         <div id="正文">
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前言：</b>
+            <h1>视频教程</h1>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1yL41137Dp&page=1"allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+            <br>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前言：</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文仅针对静态网站，如果你用的是WordPress之类的或者自写的动态网站，那么可以不用看了。（我的博客是自己写的静态网站，所以在部分代码上多少还是不规范）</p>
             <br><br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;起初：</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;起初：</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一直想找个地方放博客和一些奇奇怪怪的网站，但是租服务器消费太高了（单纯对我这种高中狗而言，如果租的是国内的服务器还要备案，如果被攻击了还得乱七八糟的维护），而且我也不会什么php之类的动态网站，服务器就完全没必要了。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后来找了一些免费的空间，但那些都是没什么声誉的，访问速度也不是很快，稳定性一般。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是乎我就盯上了GitHub Pages。但是GitHub Pages的域名并不怎么好（单纯不喜欢github.io这个二级域名，所以自己注册了个域名来绑定（这里推荐一下freenom这个域名注册商，提供了一些免费的域名后缀）），实践之后发现国内有些地区完全上不了GitHub（除了挂梯子），所以就想到了Gitee Pages，但是那玩意儿……绑定自己的域名还得开个什么VIP。最后我选择了GitHub Pages和Coding Pages境内外双路解析。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：新用户使用Coding Pages只有六个月的免费，收费标准参考 <a href="https://help.coding.net/docs/pages/price.html" target="_blank">收费说明 - CODING 帮助中心</a>  ，相对于服务器来说还是比较便宜的。</p>
             <br><br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进 <a href="https://github.com/" target="_blank">GitHub</a> 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二步 新建GitHub仓库</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二步 新建GitHub仓库</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;找到右上角头像旁边的“+”，在下拉菜单中点击“New repository”。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Repository name”中填写仓库名称（其实可以不用像其他教程那样以[GitHub的用户名.github.io]为格式填写，要知道GitHub pages分为个人站点和组织站点，详细信息请参考 <a href="https://docs.github.com/cn/pages/getting-started-with-github-pages/about-github-pages" target="_blank">About GitHub Pages - GitHub Docs</a> ）。“Description”即为描述，填不填没什么影响。选择“Public”。“Initialize this repository with”中选择“Add a README file”以方便快速初始化仓库（默认为main分支，但coding pages上部署只能是master分支，所以在GitHub上搭建完仓库后更改分支名称。点击仓库文件上方的“Settings”，左侧点击“Branches”，在“Default branch”中的main右侧点击类似于铅笔的图标，将“main”改为“master”后点击“Rename branch”即可）。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三步 上传静态网站文件</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三步 上传静态网站文件</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我有三种方法上传文件：1.使用git工具；2.直接用浏览器上传；3.使用GitHub Desktop软件（推荐）。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用第三种方法举例子吧（软件下载： <a href="https://desktop.github.com/" target="_blank">GitHub Desktop | Simple collaboration from your desktop</a> ，安装完后直接用GitHub账号登录即可。使用其他两个请自行搜索教程）。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先将仓库clone到本地：点击“Clone a repository”，在“Your repository”中选择第二步所建的仓库，点击“Clone”（“Local path”为仓库clone到本地的路径，请记住这个路径）。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将网站文件移动到仓库所在的路径下（路径下会有个“README.md”文件，可删除）。最后回到GitHub Desktop，在“Summary(required)”中填写概要，接着点击“Commit to master”，最后点击“Fetch origin”同步到GitHub。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四步 开启GitHub Pages</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四步 开启GitHub Pages</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回到浏览器，进入仓库便能看到上传的网页文件。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击“Settings”，左侧点击“Pages”。在“Source”中将“None”改为“master”并点击“Save”保存。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在下方的“Custom domain”填写域名并点击“Save”保存，按照要求将域名以CNAME解析到[你的GitHub的用户名.github.io.]，解析路线选择“境外”（我用的是dnspod，其他的域名解析商我就不太清楚了）。可勾选“Enforce HTTPS”以强制使用https。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这时候用你所绑定的域名进入浏览器检查是否生效。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五步 注册Coding</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五步 注册Coding</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同注册GitHub一样，进入 <a href="https://coding.net/" target="_blank">CODING - 一站式软件研发管理平台</a> 巴拉巴拉一同注册就彳亍了。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第六步 新建Coding项目</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第六步 新建Coding项目</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录后在主页左侧点击“项目”，在项目列表中点击“创建项目”，选择“全功能的DevOps项目”。项目名称可随意填写。</p>
             <br>
             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第七步 新建Coding仓库并从GitHub同步文件</b>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目创建后进入该项目。点击左侧的“代码仓库”。在右上角点击“创建代码仓库”。最上方选择“导入外部仓库”。按照要求填入仓库信息（“Git仓库URL”中填入GitHub的仓库中“Code”下的“HTTPS”给的链接），选择“公开仓库”并完成创建。</p>
             <br>
-            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第八步 开启Coding Pages服务</b>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第八步 开启Coding Pages服务</h1>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在项目的左侧找到“持续部署”，点击“网站托管”，完成所提示的要求。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在右上角点击“新建网站”，按照要求填写信息，节点选择“香港”（因为其它节点，使用自定义域名需要备案），确定后等待部署。当部署成功时点击所开启的网站，点击“自定义域名”，点击右上角的“添加域名”，按照要求添加CNAME解析，解析路线选择“境内”。可勾选“强制HTTPS”以强制使用https。</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这时候可以ping一下看看有没有生效。（如果你在境内，ping出的IP地址应该是在香港）</p>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里说一下，使用香港节点时可能会出现偶尔无法访问的情况。我也给Coding提交了工单，他们是这样回复我的：</p>
+            <img src="1.jpg" width="100%">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所以，有能力的话，尽量使用大陆内的节点，以防出现同类型的状况。</p>
         </div>
 
         <!--尾页-->
