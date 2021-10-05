@@ -19,7 +19,7 @@ body {
 }
 
 .字体变色 {
-    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 .字体变色:hover {
     color: black;
@@ -54,7 +54,7 @@ body {
     padding: 0px 1%;
     font-size: 30px;
     color: rgb(161, 161, 161);
-    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 #导航 ul li:hover{
     color: lightgray;

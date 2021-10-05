@@ -18,7 +18,7 @@
 p a {
     color: black;
     border-bottom: 1px dashed black;
-    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 p a:hover {
     color: gray;
