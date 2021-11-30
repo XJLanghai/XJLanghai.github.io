@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        @font-face {
+            font-family: song;
+            src: url(fonts/方正清刻本悦宋.ttf);
+        }
+        a {
+            text-decoration: none;
+        }
+        h1 {
+            font-family: song;
+        }
+    </style>
+</head>
+<body style="margin: 0px;">
+    <div id="1" style="height: 100vh;width: 100%;background-color: rgb(30, 30, 30);">
+        <div style="position: absolute;top: 35vh;width: 100%;">
+            <h1 style="color: white;text-align: center;">王姐姐 你好</h1>
+        </div>
+        <a class="a" href="#2" style="position: absolute;top: 75vh;left: 10px;">
+            <div style="width: 6vw;height: 6vw;background-color: rgb(255, 230, 230);color: gray;border-radius: 100px;">
+                <div style="position: absolute;top: 3vh;font-size: 2vw;text-align: center;width: 6vw;">v</div>
+            </div>
+        </a>
+    </div>
+    
+    <div id="2" style="height: 100vh;width: 100%;background-color: blue;">
+        <div style="position: absolute;top: 135vh;width: 100%;">
+            <h1 style="color: white;text-align: center;">今天是您的生日</h1>
+        </div>
+        <a class="a" href="#3" style="position: absolute;top: 175vh;left: 10px;">
+            <div style="width: 6vw;height: 6vw;background-color: rgb(255, 230, 230);color: gray;border-radius: 100px;">
+                <div style="position: absolute;top: 3vh;font-size: 2vw;text-align: center;width: 6vw;">v</div>
+            </div>
+        </a>
+    </div>
+
+    <div id="3" style="height: 100vh;width: 100%;background-color: blue;">
+        <div style="position: absolute;top: 235vh;width: 100%;">
+            <h1 style="color: white;text-align: center;">也是您在一中实习的最后一天</h1>
+        </div>
+        <a class="a" href="#4" style="position: absolute;top: 275vh;left: 10px;">
+            <div style="width: 6vw;height: 6vw;background-color: rgb(255, 230, 230);color: gray;border-radius: 100px;">
+                <div style="position: absolute;top: 3vh;font-size: 2vw;text-align: center;width: 6vw;">v</div>
+            </div>
+        </a>
+    </div>
+    <script>
+        $(".a").click(function(){undefined
+            var href = $(this).attr("href");
+            var pos = $(href).offset().top;
+            $("html,body").animate({scrollTop: pos}, 1000);
+            return false;
+        });
+    </script>
+</body>
+</html>
