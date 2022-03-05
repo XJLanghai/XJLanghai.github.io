@@ -28,6 +28,13 @@
                 color: white;
             }
 
+            .文字变色 {
+                transition: 0.5s;
+            }
+            .文字变色:hover {
+                color: rgb(218, 84, 124);
+            }
+
             @keyframes typing {
                 from { width: 0}
             }
@@ -57,6 +64,17 @@
                 width: 450px;
                 position: absolute;
                 top: 13vw;
+            }
+
+            .tags {
+                padding-top: 6px;
+                padding-block-end: 6px;
+                padding-left: 14px;
+                padding-right: 14px;
+                border-radius: 100vw;
+                border: 1px solid rgb(218, 84, 124);
+                background-color: rgb(251, 239, 244);
+                color: rgb(218, 84, 124);
             }
         </style>
         <script>
@@ -100,13 +118,14 @@
         <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 
-        <!--个人信息-->
+        <!--个人介绍-->
         <div class="左出" style="width: 18%;position: absolute;top: 34.5vw;left: 2.8%;background-color: white;">
             <div style="position: absolute;background-color: rgb(50, 50, 50);height: 9vw;width: 100%;z-index: -1;"></div>
             <div style="text-align: center;margin-top: 3vw;margin-bottom: 3vw;padding: 2vw;">
                 <img src="imgs/头像.png" style="width: 8vw;">
-                <h1 style="color: rgb(0, 123, 255);">螂海</h1>
-                <p style="color: gray;">静坐常思己过，闲谈莫论人非。</p>
+                <h1 style="color: rgb(0, 123, 255);">螂海<p style="font-family: Monda;font-size: 10px;">XJ_Langhai</p></h1>
+                <p style="color: gray;font-size: 12;">静坐常思己过，闲谈莫论人非。</p>
+                <p style="color: gray;font-family: Monda;font-size: 12px;">Always reflect on your faults, never talk gossip when chat.</p>
                 <p style="color: gray;font-family: Monda;">🎂2005-12-31</p>
                 <hr style="width: 50%;">
                 <table cellspacing="10px" style="margin: 0px auto;text-align: left;">
@@ -140,7 +159,7 @@
 
 
         <!--导航-->
-        <nav id="导航">
+        <nav id="导航" class="左出">
             <ul style="font-family: Monda;">
                 <li onclick="a(0)">HOME</li>
                 <li onclick="a(1)">TAGS</li>
@@ -158,24 +177,52 @@
 
             <!--正文-->
             <div style="margin-top: 5vw;margin-bottom: 10vw;">
-                <div style="margin: 0 auto;width: 50%;text-align: left;background-color: rgb(230, 230, 230);padding: 20px;border-radius: 20px;">
-                    <h1 style="text-align: center;">使用域名以及Github Pages和Coding Pages进行境内外双路解析搭建网站</h1>
+                <!--使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站-->
+                <div class="下出" style="margin: 0 auto;width: 50%;text-align: left;background-color: rgb(230, 230, 230);padding: 20px;border-radius: 10px;margin-bottom: 2vw">
+                    <h2 style="text-align: center;">使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站</h2>
                     <hr>
                     <div style="color: gray;">
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一直想找个地方放博客和一些奇奇怪怪的网站，但是租服务器消费太高了（单纯对我这种高中狗而言，如果租的是国内的服务器还要备案，如果被攻击了还得乱七八糟的维护），而且我也不会什么php之类的动态网站，服务器就完全没必要了。</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后来找了一些免费的空间，但那些都是没什么声誉的，访问速度也不是很快，稳定性一般。</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是乎我就盯上了GitHub Pages和Coding Pages来进行境内外双路解析。</p>        
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下方法可能无法正常使用，可在进行第五步至第八步时改用Cloudflare进行全球cdn加速。</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</p>
+                        <p>进 GitHub 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
                     </div>
                     <div class="按钮变色bg" style="margin: 0 auto;text-align: center;width: 20%;padding: 1%;border:3px solid black;">
-                        <a href="pages/使用域名以及Github Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: gray;">
+                        <a href="pages/使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: gray;">
                             <div class="按钮变色">阅读全文»</div>
                         </a>
                     </div>
-                    <p style="text-align: right;color: gray;">发布日期：2021/8/27</p>
-                    <p style="text-align: right;color: gray;">更新日期：2021/10/5</p>
+                    <p style="text-align: right;color: gray;">发布日期：2021/08/27</p>
+                    <p style="text-align: right;color: gray;">更新日期：2022/02/05</p>
+                    <nobr class="tags">干货</nobr>
+                    <nobr class="tags">GitHub</nobr>
+                    <nobr class="tags">建站</nobr>
+                    <nobr class="tags">域名</nobr>
                 </div>
-            </div>
+                <!--Minecraft渲染图2021-2-6-->
+                <div class="下出" style="margin: 0 auto;width: 50%;text-align: left;background-color: rgb(230, 230, 230);padding: 20px;border-radius: 10px;margin-bottom: 2vw">
+                    <h2 style="text-align: center;">Minecraft渲染图2021-2-6</h2>
+                    <hr>
+                    <div style="color: gray;">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下图片版权由螂海所有，转载时需标明出处，未经允许禁止商用。</p>
+                        <img src="pages/Minecraft渲染图2021-2-6/1.png" width="32.5%">
+                        <img src="pages/Minecraft渲染图2021-2-6/2.png" width="32.5%">
+                        <img src="pages/Minecraft渲染图2021-2-6/3.png" width="32.5%">
+                    </div>
+                    <div class="按钮变色bg" style="margin: 0 auto;text-align: center;width: 20%;padding: 1%;border:3px solid black;">
+                        <a href="pages/Minecraft渲染图2021-2-6/index.html" target="_blank" style="color: gray;">
+                            <div class="按钮变色">阅读全文»</div>
+                        </a>
+                    </div>
+                    <p style="text-align: right;color: gray;">发布日期：2021/02/06</p>
+                    <p style="text-align: right;color: gray;">更新日期：2021/02/13</p>
+                    <nobr class="tags">C4D</nobr>
+                    <nobr class="tags">Minecraft</nobr>
+                    <nobr class="tags">图片</nobr>
+                    <nobr class="tags">渲染</nobr>
+                </div>
 
+            </div>
         </div>
 
 
@@ -186,37 +233,228 @@
             <div style="width: 450px;margin: 0px auto;">
                 <p id="打字2">弱小和无知不是生存的障碍，傲慢才是。</p>
             </div>
-            <br><br><br><br><br><br><br><br><br><br>
 
             <!--正文-->
-            <div>
+            <div style="width: 50vw;margin-left: 30vw;">
+                <!--标签-->
+                <div style="line-height:2.4;">
+                    <a href="#Arduino"><nobr class="tags">Arduino</nobr></a>
+                    <a href="#C4D"><nobr class="tags">C4D</nobr></a>
+                    <a href="#DIY"><nobr class="tags">DIY</nobr></a>
+                    <a href="#GitHub"><nobr class="tags">GitHub</nobr></a>
+                    <a href="#Minecraft"><nobr class="tags">Minecraft</nobr></a>
+                    <a href="#Mine-imator"><nobr class="tags">Mine-imator</nobr></a>
+                    <a href="#服务器"><nobr class="tags">服务器</nobr></a>
+                    <a href="#干货"><nobr class="tags">干货</nobr></a>
+                    <a href="#建站"><nobr class="tags">建站</nobr></a>
+                    <a href="#树莓派"><nobr class="tags">树莓派</nobr></a>
+                    <a href="#图片"><nobr class="tags">图片</nobr></a>
+                    <a href="#渲染"><nobr class="tags">渲染</nobr></a>
+                    <a href="#域名"><nobr class="tags">域名</nobr></a>
+                    <a href="#装机"><nobr class="tags">装机</nobr></a>
+                </div>
 
+                <div>
+                    <div>
+                        <!--Arduino-->
+                        <h2 id="Arduino" style="color: rgb(218, 84, 124);">🏷Arduino</h2>
+
+                        <br>
+                    </div>
+                    <div>
+                        <!--C4D-->
+                        <h2 id="C4D" style="color: rgb(218, 84, 124);">🏷C4D</h2>
+                        <a href="pages/Minecraft渲染图2021-2-6/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">Minecraft渲染图2021-2-6</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下图片版权由螂海所有，转载时需标明出处，未经允许禁止商用。</p>
+                                    <img src="pages/Minecraft渲染图2021-2-6/1.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/2.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/3.png" width="32.5%">
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--DIY-->
+                        <h2 id="DIY" style="color: rgb(218, 84, 124);">🏷DIY</h2>
+
+                        <br>
+                    </div>
+                    <div>
+                        <!--GitHub-->
+                        <h2 id="GitHub" style="color: rgb(218, 84, 124);">🏷GitHub</h2>
+                        <a href="pages/使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下方法可能无法正常使用，可在进行第五步至第八步时改用Cloudflare进行全球cdn加速。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</p>
+                                    <p>进 GitHub 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--Minecraft-->
+                        <h2 id="Minecraft" style="color: rgb(218, 84, 124);">🏷Minecraft</h2>
+                        <a href="pages/Minecraft渲染图2021-2-6/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">Minecraft渲染图2021-2-6</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下图片版权由螂海所有，转载时需标明出处，未经允许禁止商用。</p>
+                                    <img src="pages/Minecraft渲染图2021-2-6/1.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/2.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/3.png" width="32.5%">
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--Mine-imator-->
+                        <h2 id="Mine-imator" style="color: rgb(218, 84, 124);">🏷Mine-imator</h2>
+
+                        <br>
+                    </div>
+                    <div>
+                        <!--服务器-->
+                        <h2 id="服务器" style="color: rgb(218, 84, 124);">🏷服务器</h2>
+
+                        <br>
+                    </div>
+                    <div>
+                        <!--干货-->
+                        <h2 id="干货" style="color: rgb(218, 84, 124);">🏷干货</h2>
+                        <a href="pages/使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下方法可能无法正常使用，可在进行第五步至第八步时改用Cloudflare进行全球cdn加速。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</p>
+                                    <p>进 GitHub 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--建站-->
+                        <h2 id="建站" style="color: rgb(218, 84, 124);">🏷建站</h2>
+                        <a href="pages/使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下方法可能无法正常使用，可在进行第五步至第八步时改用Cloudflare进行全球cdn加速。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</p>
+                                    <p>进 GitHub 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--树莓派-->
+                        <h2 id="树莓派" style="color: rgb(218, 84, 124);">🏷树莓派</h2>
+
+                        <br>
+                    </div>
+                    <div>
+                        <!--图片-->
+                        <h2 id="图片" style="color: rgb(218, 84, 124);">🏷图片</h2>
+                        <a href="pages/Minecraft渲染图2021-2-6/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">Minecraft渲染图2021-2-6</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下图片版权由螂海所有，转载时需标明出处，未经允许禁止商用。</p>
+                                    <img src="pages/Minecraft渲染图2021-2-6/1.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/2.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/3.png" width="32.5%">
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--渲染-->
+                        <h2 id="渲染" style="color: rgb(218, 84, 124);">🏷渲染</h2>
+                        <a href="pages/Minecraft渲染图2021-2-6/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">Minecraft渲染图2021-2-6</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下图片版权由螂海所有，转载时需标明出处，未经允许禁止商用。</p>
+                                    <img src="pages/Minecraft渲染图2021-2-6/1.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/2.png" width="32.5%">
+                                    <img src="pages/Minecraft渲染图2021-2-6/3.png" width="32.5%">
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--域名-->
+                        <h2 id="域名" style="color: rgb(218, 84, 124);">🏷域名</h2>
+                        <a href="pages/使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站/index.html" target="_blank" style="color: black;">
+                            <div class="文字变色">
+                                <h3 style="font-weight: 500;">使用域名以及GitHub Pages和Coding Pages进行境内外双路解析搭建网站</h3>
+                                <div style="color: gray;">
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠以下方法可能无法正常使用，可在进行第五步至第八步时改用Cloudflare进行全球cdn加速。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步 注册GitHub</p>
+                                    <p>进 GitHub 巴拉巴拉一通注册就彳亍了，没什么好讲的，进不了就用流量，实在不行挂梯子。</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......</p>
+                                </div>
+                            </div>
+                        </a>
+                        <hr>
+                        <br>
+                    </div>
+                    <div>
+                        <!--装机-->
+                        <h2 id="装机" style="color: rgb(218, 84, 124);">🏷装机</h2>
+
+                        <br>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
         <!--尾页-->
         <div style="background-image: url(imgs/尾页.png);background-position: 0% 20%;color: white;">
             <br>
             <table cellspacing="10px" style="margin: 0px auto;margin-top: 5vh;">
                 <tr style="font-weight: bold;">
                     <td>MADE BY <span style="color: red;">❤</span></td>
-                    <td style="padding-left: 30vw;">站长所搭建的其它网站：</td>
+                    <td style="padding-left: 15vw;">站长所搭建的其它网站：<br><div style="font-family: Monda;font-size: 12px;">OTHER WEBSITES BUILT BY THE WEBMASTER</div></td>
+                    <td style="padding-left: 15vw;">加入QQ群<a href="https://jq.qq.com/?_wv=1027&k=CvZVGfLi" target="_blank" style="color: lightgray;text-decoration: underline;">👉Click me</a><br><div style="font-family: Monda;font-size: 12px;">JOIN QQ GROUP FOR COMMUNICATION</div><img src="imgs/qgroup qr code.png" style="position: absolute;"></td>
                 </tr>
                 <tr>
-                    <td>感谢全世界的开发者</td>
-                    <td style="padding-left: 30vw;"><a href="https://the-167-world.tk/" target="_blank" style="color: lightgray;">167号世界</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="padding-left: 30vw;"><a href="https://yeluoxing.ml/" target="_blank" style="color: lightgray;">叶络行の同人文集</a></td>
+                    <td>感谢全世界的开发者<br><div style="font-family: Monda;font-size: 12px;">THANKS TO DEVELOPERS ALL OVER THE WORLD</div></td>
+                    <td style="padding-left: 15vw;"><a href="https://the-167-world.tk/" target="_blank" style="color: lightgray;">167号世界<br><div style="font-family: Monda;font-size: 12px;">The 167 World</div></a></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="padding-left: 30vw;"><a href="https://cicixiansheng.ml/" target="_blank" style="color: lightgray;">次次先生の同人文集</a></td>
+                    <td style="padding-left: 15vw;"><a href="https://yeluoxing.ml/" target="_blank" style="color: lightgray;">叶络行の同人文集</a><br><div style="font-family: Monda;font-size: 12px;"></div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="padding-left: 15vw;"><a href="https://cicixiansheng.ml/" target="_blank" style="color: lightgray;">次次先生の同人文集</a><br><div style="font-family: Monda;font-size: 12px;"></div></td>
                 </tr>
             </table>
-            <p style="text-align: center;margin-bottom: 5vh;">Copyright &copy; 2021 <a href="https://langhai.tk/" style="color: rgb(0, 123, 255);text-decoration: none;" target="_blank"><b>螂海</b></a>. All rights reserved.</p>
+            <p style="text-align: center;margin-bottom: 5vh;">Copyright &copy; 2021-2022 <a href="https://langhai.tk/" style="color: rgb(0, 123, 255);text-decoration: none;" target="_blank"><b>螂海</b></a>. All rights reserved.</p>
             <br>
             <div style="background-color: rgb(31, 31, 31);height: 100px;display: flex;justify-content: center;align-items: center;">
                 <p>您刚刚获得成就 <span style="color: purple;font-weight: bold;">[结束了？]</span></p>
