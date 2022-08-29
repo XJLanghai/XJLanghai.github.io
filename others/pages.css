@@ -23,3 +23,10 @@ p a {
 p a:hover {
     color: gray;
 }
+
+
+code {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 5px;
+}
