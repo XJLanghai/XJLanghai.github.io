@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用树莓派搭建QQ机器人——Mirai，让你的派不再吃灰 - 螂海的个人博客</title>
+    <meta name="keywords"  content="螂海,博客,个人博客,螂海的个人博客,螂海の个人博客,螂海的个人blog,螂海の个人blog,blog,XJLanghai,XJ_Langhai,Langhai,XJ,Xingjin,XJ Studio,Xingjin Studio,GitHub Pages,Coding Pages,搭建网站,域名">
+    <meta name="description"  content="螂海的个人博客">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../others/base.css" >
+    <link rel="stylesheet" href="../../others/pages.css">
+    <link rel="stylesheet" href="../../others/出现动画.css">
+    <script src="../../others/love.js"></script>
+    <script src="../../others/出现动画.js"></script>
+    <link rel="stylesheet" href="../../live2d/waifu.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?448994da536d700054c5dfcfac0b7213";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+     <!--live2d-->
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280px" height="250px" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>    
+    <script src="../../live2d/waifu-tips.js"></script>
+    <script src="../../live2d/live2d.js"></script>
+    <script type="text/javascript">initModel("../../live2d/")</script>
+
+
+    <!--gitter-->
+    <script>
+        ((window.gitter = {}).chat = {}).options = {
+          room: '螂海的个人博客/community'
+        };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+    <!--个人介绍-->
+    <div class="左出" style="width: 18%;position: absolute;left: 2.8%;background-color: white;">
+        <div style="position: absolute;background-color: rgb(50, 50, 50);height: 9vw;width: 100%;z-index: -1;"></div>
+        <div style="text-align: center;margin-top: 3vw;margin-bottom: 3vw;padding: 2vw;">
+            <img src="../../imgs/头像.png" style="width: 8vw;">
+            <h1 style="color: rgb(0, 123, 255);">螂海<p style="font-family: Monda;font-size: 10px;">XJ_Langhai</p></h1>
+            <p style="color: gray;font-size: 12;">静坐常思己过，闲谈莫论人非。</p>
+            <p style="color: gray;font-family: Monda;font-size: 12px;">Always reflect on your faults, never talk gossip when chat.</p>
+            <p style="color: gray;font-family: Monda;">🎂2005-12-31</p>
+            <hr style="width: 50%;">
+            <table cellspacing="10px" style="margin: 0px auto;text-align: left;">
+                <tr>
+                    <td>
+                        <a href="https://github.com/XJLanghai" target="_blank" title="User:XJLanghai" style="color: gray;font-family: Monda;font-size: 16px;">
+                            <img src="https://github.com/favicon.ico" style="width: 16px;"><span class="字体变色">GitHub</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://space.bilibili.com/442729189" target="_blank" title="UID:442729189" style="color: gray;font-family: Monda;font-size: 16px;">
+                            <img src="https://www.bilibili.com/favicon.ico" style="width: 16px;"><span class="字体变色">bilibili</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=654126913&site=qq&menu=yes" target="_blank" title="QQ:654126913" style="color: gray;font-family: Monda;font-size: 16px;">
+                            <img src="https://im.qq.com/favicon.ico" style="width: 16px;"><span class="字体变色">QQ</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="mailto:xj_langhai@qq.com" target="_blank" title="Email:XJ_Langhai@qq.com" style="color: gray;font-family: Monda;font-size: 16px;">
+                            <img src="http://rescdn.mail.qq.com/zh_CN/htmledition/images/logo/app/qqmail_logo_android_32h.png" style="width: 16px;"><span class="字体变色">Email</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--导航-->
+    <nav id="导航">
+        <ul style="font-family: Monda;">
+            <a href="../../index.html"><li>HOME</li></a>
+        </ul>
+    </nav>
+
+    <!--标题-->
+    <div id="标题">用树莓派搭建QQ机器人——Mirai，让你的派不再吃灰</div>
+    <!--正文-->
+    <div id="正文">
+        <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文章版权由螂海所有，转载时需标明出处</b></p>
+        <h2>效果演示</h2>
+        <img src="1.png" width="50%">
+        <br><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载：</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前往 https://github.com/iTXTech/mcl-installer/releases 下载所对应的框架（我用的是树莓派3b，装的是官方的64位系统，故下载是的linux aarch64的版本；如果不知道自己的系统是多少位，则可以在终端使用 <code>uname -a</code> 命令查看）。下载完成后把文件丢至想要装在树莓派的任意路径里。</p>
+        <br><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装：</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行mcl-installer，程序会下载所需要的文件。</p>
+        <img src="2.png" width="80%">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（内容截自 <a href="https://github.com/iTXTech/mcl-installer" target="_blank">https://github.com/iTXTech/mcl-installer</a> ）</p>
+        <br><br>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装完成后目录下会多出其他的文件，运行mcl。启动完成后输入 <code>/login &lt;作为QQ机器人的账号&gt; &lt;作为QQ机器人的密码&gt;</code> 。若终端出现登录验证时，将弹出的链接复制至浏览器完成验证即可。待出现 Login successful 字样时即登陆成功。输入 <code>/help</code> 可查看更多指令。</p>
+        <br><br>
+        <h2>另：</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时你的QQ机器人已搭建完成，但只能接收到别人发的消息。要实现其他功能可进入其论坛找到相应插件并配置或自行开发。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github仓库：<a href="https://github.com/mamoe/mirai" target="_blank">https://github.com/mamoe/mirai</a></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;论坛：<a href="https://github.com/mamoe/mirai" target="_blank">https://github.com/mamoe/mirai</a></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开发文档：<a href="https://docs.mirai.mamoe.net/" target="_blank">https://docs.mirai.mamoe.net/</a></p>
+    </div>
+
+    <!--尾页-->
+    <div style="background-image: url(../../imgs/尾页.png);background-position: 0% 20%;color: white;">
+        <br>
+        <table cellspacing="10px" style="margin: 0px auto;margin-top: 5vh;">
+            <tr style="font-weight: bold;">
+                <td>MADE BY <span style="color: red;">❤</span></td>
+                <td style="padding-left: 15vw;">站长所搭建的其它网站：<br><div style="font-family: Monda;font-size: 12px;">OTHER WEBSITES BUILT BY THE WEBMASTER</div></td>
+                <td style="padding-left: 15vw;">加入QQ群<a href="https://jq.qq.com/?_wv=1027&k=CvZVGfLi" target="_blank" style="color: lightgray;text-decoration: underline;">👉Click me</a><br><div style="font-family: Monda;font-size: 12px;">JOIN QQ GROUP FOR COMMUNICATION</div><img src="../../imgs/qgroup qr code.png" style="position: absolute;"></td>
+            </tr>
+            <tr>
+                <td>感谢全世界的开发者<br><div style="font-family: Monda;font-size: 12px;">THANKS TO DEVELOPERS ALL OVER THE WORLD</div></td>
+                <td style="padding-left: 15vw;"><a href="https://the-167-world.tk/" target="_blank" style="color: lightgray;">167号世界<br><div style="font-family: Monda;font-size: 12px;">The 167 World</div></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 15vw;"><a href="https://yeluoxing.ml/" target="_blank" style="color: lightgray;">叶络行の同人文集</a><br><div style="font-family: Monda;font-size: 12px;"></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 15vw;"><a href="https://cicixiansheng.ml/" target="_blank" style="color: lightgray;">次次先生の同人文集</a><br><div style="font-family: Monda;font-size: 12px;"></div></td>
+            </tr>
+        </table>
+        <p style="text-align: center;margin-bottom: 5vh;">Copyright &copy; 2021-2022 <a href="https://langhai.tk/" style="color: rgb(0, 123, 255);text-decoration: none;" target="_blank"><b>螂海</b></a>. All rights reserved.</p>
+        <br>
+        <div style="background-color: rgb(31, 31, 31);height: 100px;display: flex;justify-content: center;align-items: center;">
+            <p>您刚刚获得成就 <span style="color: purple;font-weight: bold;">[结束了？]</span></p>
+        </div>
+    </div>
+
+</body>
+</html>
