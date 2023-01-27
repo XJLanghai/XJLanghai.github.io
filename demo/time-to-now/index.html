@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <title>嗜</title>
         <style>
+            @font-face {
+                font-family: song;
+                src: url("fonts/方正清刻本悦宋.ttf");
+            }
+            @font-face {
+                font-family: monda;
+                src: url("fonts/Monda.ttf");
+            }
             bg {
                 margin-top: 20%;
             }
@@ -28,11 +36,11 @@
     </head>
     <body>
         <img id="bg" src="imgs/7.jpg" width="100%">
-        <div id="remainTime" style="position: absolute;font-size: 20px;">
-            <span id="one"></span>天
-            <span id="two"></span>时
-            <span id="three"></span>分
-            <span id="four"></span>秒
+        <div id="remainTime" style="position: absolute;font-size: 20px;font-family: song;">
+            <span id="one" style="font-family: monda;"></span>天
+            <span id="two" style="font-family: monda;"></span>时
+            <span id="three" style="font-family: monda;"></span>分
+            <span id="four" style="font-family: monda;"></span>秒
         </div>
     </body>
     <script>
