@@ -21,7 +21,7 @@
                 color:#555;
             }
 
-            body{
+            body {
                 height: 100vh;
                 background: pink;
                 display: flex;
