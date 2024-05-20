@@ -2,7 +2,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <title>嗜</title>
+        <title>Y</title>
         <script src="love.js"></script>
         <style>
             @font-face {
@@ -146,6 +146,16 @@
                 }
             }
         </style>
+        <style>
+            .outlined-text {
+            color: white; /* 文字颜色 */
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000; /* 描边大小、颜色 */
+            }
+        </style>
         <script>
             var _hmt = _hmt || [];
             (function() {
@@ -172,21 +182,8 @@
         <img id="bg" src="imgs/7.jpg" width="100%">
         -->
         <div id="remainTime" style="position: absolute;font-size: 20px;font-family: song;">
-            <span style="font-size: 20px;font-family: monda;">2023/01/18</span><span style="font-size: 20px;"></span>至今</span>
-            <br>
-            <span style="font-size: 20px;">我们已无话不谈了</span>
-            <br>
-            <span id="cday" style="font-family: monda;font-size: 40px;color: rgb(0, 206, 209);"></span><span style="font-size: 40px;color: black;">天</span>
-            <br>
-            <span id="chour" style="font-family: monda;color: rgb(255, 80, 0);"></span>时
-            <span id="cminute" style="font-family: monda;color: rgb(255, 80, 0);"></span>分
-            <span id="csecond" style="font-family: monda;color: rgb(255, 80, 0);"></span>秒
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <span style="font-size: 20px;font-family: monda;">2023/02/05 17:09:46</span><span style="font-size: 20px;"><br></span>我们正式确立了关系<br>到现在 我们同甘共苦了</span>
+            <h1><span class="outlined-text" style="color: rgb(0, 206, 209)">张 涵</span> & <span class="outlined-text" style="color: rgb(255, 20, 145)">杨 洁</span></h1>
+            <span style="font-size: 20px;font-family: monda;">2024/05/09 22:39:00</span><span style="font-size: 20px;"><br></span>我们正式确立了关系<br>到现在 我们同甘共苦了</span>
             <br>
             <span id="eday" style="font-family: monda;font-size: 40px;color: rgb(0, 206, 209);"></span><span style="font-size: 40px;color: black;">天</span>
             <br>
@@ -198,112 +195,12 @@
     <script>
         (function show() {      
             //1.设置目的时间
-            var bcYear = 2023
-            var bcMonth = 0
-            var bcDay = 18
-            var bcHour = 0
-            var bcMinute = 0
-            var bcSecond = 0
-            var bcDate = new Date(bcYear, bcMonth, bcDay, bcHour, bcMinute, bcSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var bcTime = bcDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allcTime = presenTime - bcTime;          
-                //6.把毫秒转换为秒
-                var allcSecond = parseInt(allcTime / 1000);
-                //7.获取剩余多少天
-                var cday = size(parseInt(allcSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var chour = size(parseInt(allcSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var cminute = size(parseInt(allcSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var csecond = size(parseInt(allcSecond % 60));
-                //11.注入：
-                document.getElementById('cday').innerHTML = cday;
-                document.getElementById('chour').innerHTML = chour;
-                document.getElementById('cminute').innerHTML = cminute;
-                document.getElementById('csecond').innerHTML = csecond;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }  
-        })()
-        //格式化日期格式 2
-        function dateFormat(data){
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
-    </script>
-        <script>
-        (function show() {      
-            //1.设置目的时间
-            var bcYear = 2023
-            var bcMonth = 0
-            var bcDay = 18
-            var bcHour = 0
-            var bcMinute = 0
-            var bcSecond = 0
-            var bcDate = new Date(bcYear, bcMonth, bcDay, bcHour, bcMinute, bcSecond);
-            // console.log(dateFormat(funtureDate))
-            //2.设置定时器
-            setInterval(function () {
-                //3.获取现在的时间
-                var presentDate = new Date();
-                //4.获取时间戳
-                var bcTime = bcDate.getTime();
-                var presenTime = presentDate.getTime();
-                //5.获取剩余的时间戳
-                var allcTime = presenTime - bcTime;          
-                //6.把毫秒转换为秒
-                var allcSecond = parseInt(allcTime / 1000);
-                //7.获取剩余多少天
-                var cday = size(parseInt(allcSecond / 3600 / 24));
-                //8.获取剩余多少小时
-                var chour = size(parseInt(allcSecond / 3600 % 24));
-                //9.获取剩余多少分钟
-                var cminute = size(parseInt(allcSecond / 60 % 60));
-                //10.获取剩余多少秒
-                var csecond = size(parseInt(allcSecond % 60));
-                //11.注入：
-                document.getElementById('cday').innerHTML = cday;
-                document.getElementById('chour').innerHTML = chour;
-                document.getElementById('cminute').innerHTML = cminute;
-                document.getElementById('csecond').innerHTML = csecond;
-            }, 1000);
-            //如果数>=10,则在前面补0
-            function size(num) {
-                return num < 10 & num >= 0 ? '0' + num : num;
-            }  
-        })()
-        //格式化日期格式 2
-        function dateFormat(data){
-            var date = new Date(data);
-            var YY = date.getFullYear() + '-';
-            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
-            return YY + MM + DD;
-        }
-    </script>
-    <script>
-        (function show() {      
-            //1.设置目的时间
-            var beYear = 2023
-            var beMonth = 1
-            var beDay = 5
-            var beHour = 17
-            var beMinute = 09
-            var beSecond = 49
+            var beYear = 2024
+            var beMonth = 4
+            var beDay = 9
+            var beHour = 22
+            var beMinute = 39
+            var beSecond = 0
             var beDate = new Date(beYear, beMonth, beDay, beHour, beMinute, beSecond);
             // console.log(dateFormat(funtureDate))
             //2.设置定时器
